@@ -9,18 +9,82 @@
 </head>
 
 <body>
-  <header>
-    <h1>Welcome to my page!</h1>
-    <hr>
-  </header>
-  <div class="grid-container">
-    <div class="card"></div>
-    <div class="card primary"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card accent"></div>
+
+  <div class="container">
+
+    <main class="primary" id="tabs">
+
+      <div class="tab-content" id="diary">
+        <h2>diary</h2>
+        <hr>
+        <p>01/01/23
+          dear diary…
+
+          as you know I’ve been having a great time travelling and illustrating. But I think I need to start a new chapter in my life. Something creative, of course! Something that would reach a lot more people. Maybe even something that could make their lives better? And something that challenges my brain in a different way to art. I really miss all the tricky problems I had to solve at uni!
+
+          Remember a few years ago when i did those freecodecamp courses and made some websites? That was so much fun! It’s time I got serious. I think I’ll try this web development bootcamp…
+
+        </p>
+        <p>
+          01/04/23
+          dear diary…
+
+          I learned so much! I think I might be really good at this stuff?? And theres so much more to learn, I can’t wait! Ruby on Rails was interesting but I want to go back to javascript. I’m going to teach myself typescript and node.js and React and Svelte!!
+        </p>
+        <p>01/01/24
+          dear diary…
+
+          I've been trying so hard but I'm getting a bit tired now. I've done lots of projects and lots of learning, but I just can't seem to show it in an interview.
+        </p>
+      </div>
+
+      <div class="tab-content active" id="about">
+        <h2>about</h2>
+        <hr>
+        <div class="about__inner">
+          <div class="about__image"></div>
+          <div>
+            <p>dummy content</p>
+            <ul>
+              <li>ncsajcakc</li>
+              <li>ncsajcakc</li>
+              <li>ncsajcakc</li>
+              <li>ncsajcakc</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="another">
+
+      </div>
+
+    </main>
+    <nav class="tab-buttons__side">
+      <div class="tab-control accent primary">about</div>
+      <div class="tab-control accent">diary</div>
+      <div class="tab-control accent">another</div>
+    </nav>
+
   </div>
+
+  <script>
+    const allTabs = document.querySelectorAll(".tab-content")
+    const allTabButtons = document.querySelectorAll(".tab-control")
+
+    const showTab = (event) => {
+      id = event.currentTarget.innerHTML
+      // hide all tabs
+      allTabs.forEach(tab => tab.classList.remove("active"))
+      // we set the element with this id to "block"
+      document.getElementById(id).classList.add("active")
+      // change colours of tabs
+      allTabButtons.forEach(btn => btn.classList.remove("primary"))
+      event.currentTarget.classList.add("primary")
+    }
+
+    allTabButtons.forEach(btn => btn.addEventListener("click", showTab))
+  </script>
 </body>
 
 </html>
