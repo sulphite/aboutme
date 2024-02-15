@@ -74,8 +74,10 @@ hr {
 body {
   margin: 0;
   background-color: var(--background);
+  background-image: url(https://cdn.wallpapersafari.com/15/66/nVMH5S.jpg);
+  background-blend-mode:difference;
+  background-size: cover;
   color: var(--text)
-
 }
 
 header {
@@ -186,7 +188,7 @@ header {
 }
 
 .tab-control, #tabs {
-  box-shadow: rgba(0,0,0,0.3) -5px 5px 5px;
+  box-shadow: rgba(0, 0, 255, 0.3) 5px 5px 5px;
 }
 
 @keyframes fadeIn {
@@ -199,23 +201,13 @@ header {
 }
 
 @media(min-width: 50em) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: 2fr 4fr 1fr;
-    width: 90%;
-    height: 50vh;
-    margin: 0 auto;
-    gap: 1em;
-
-  }
 
   .container {
-    height: 400px;
-    width: 700px;
+    height: 500px;
+    width: 600px;
     margin: 5em auto;
     display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: 100%;
+    grid-template-rows: 12.5% 87.5%;
   }
 
   #tabs {
@@ -226,17 +218,21 @@ header {
 
   .tab-buttons__side {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
 
   }
 
   .tab-control {
-    padding: 2em 0.5em;
-    padding-left: 10px;
-    margin-left: -5px;
-    border-radius: 0 2em 2em 0;
-    width: 100px;
+    position: relative;
+    top: 15px;
+    text-align: center;
+    font-weight: bold;
+    padding: 1em;
+    padding-bottom: 10px;
+    margin-bottom: -5px;
+    border-radius: 1em 1em 0 0;
+    min-width: 100px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     transform: rotate(3deg);
@@ -244,8 +240,7 @@ header {
   }
 
   .tab-control:hover {
-    width: 110px;
-    padding-left: 20px
+    top: 0;
   }
 
   .card {
