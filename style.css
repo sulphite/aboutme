@@ -85,45 +85,53 @@ header {
   margin: 0 auto;
 }
 
-.grid-container {
+.container {
+  height: 80dvh;
+  width: 95vw;
+  margin: 2em auto;
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  width: 90%;
-  max-height: 50vh;
-  margin: 0 auto;
-  gap: 1em;
-
+  grid-template-rows: 12.5% 87.5%;
 }
 
-.card {
-  background-color: var(--secondary);
+#tabs {
+  height: 100%;
+  z-index: 10;
   padding: 1em;
 }
 
-.card-title {
-  position: absolute;
+.tab-buttons__side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
 }
 
+.tab-control {
+  position: relative;
+  top: 15px;
+  text-align: center;
+  font-weight: bold;
+  padding: 1em;
+  padding-bottom: 10px;
+  margin-bottom: -5px;
+  border-radius: 1em 1em 0 0;
+  min-width: 100px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  transform: rotate(3deg);
+  z-index: 1;
+}
+.tab-control:nth-child(2) {
+  transform: rotate(5deg);
+  top: 10px;
+}
+
+.tab-control:nth-child(3) {
+  transform: rotate(-5deg);
+}
 
 .accent {
   background-color: var(--accent);
-}
-
-.text-sideways {
-  font-size: 4em;
-  text-orientation: sideways;
-  writing-mode: vertical-rl;
-  text-align: center;
-  text-shadow: #fcac89 8px -8px 0;
-}
-
-.diary {
-  background-image: url(https://media.istockphoto.com/id/165958565/vector/vector-illustrations-of-lined-paper-with-texture.jpg?s=612x612&w=0&k=20&c=wxRBepYH3b_C3QEWRKO2ttcCAGIyIcJku2TO955AHL0=);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-left: 85px;
-  overflow-y: scroll;
 }
 
 #diary {
@@ -155,16 +163,6 @@ header {
 .tab-content.active {
   display: block;
   opacity: 1
-}
-
-.button {
-  font-size: 1rem;
-  padding: 0.5em;
-  background-color: var(--background);
-  border: 0;
-  margin: 0.2em;
-  cursor: pointer;
-  font-family: inherit;
 }
 
 .primary {
@@ -206,7 +204,6 @@ header {
     height: 500px;
     width: 600px;
     margin: 5em auto;
-    display: grid;
     grid-template-rows: 12.5% 87.5%;
   }
 
@@ -216,40 +213,12 @@ header {
     padding: 1em;
   }
 
-  .tab-buttons__side {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-  }
-
-  .tab-control {
-    position: relative;
-    top: 15px;
-    text-align: center;
-    font-weight: bold;
-    padding: 1em;
-    padding-bottom: 10px;
-    margin-bottom: -5px;
-    border-radius: 1em 1em 0 0;
-    min-width: 100px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    transform: rotate(3deg);
-    z-index: 1;
-  }
-
   .tab-control:hover {
     top: 0;
-  }
-
-  .card {
-    max-height: 100%;
   }
 
   .primary {
     background-color: var(--primary);
   }
-
 
 }
