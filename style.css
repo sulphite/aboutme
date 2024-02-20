@@ -93,12 +93,13 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
   font-weight: 600;
   font-family: "Playfair Display";
   font-style: italic;
   font-size: 1.1rem;
   padding-right: 0.5em;
-  margin: 1em 0 0.5em;
+  margin: 0.5em 0;
 }
 
 .btn {
@@ -170,7 +171,7 @@ header {
   background-color: var(--accent);
 }
 
-#diary {
+#diary, #another {
   overflow-y: scroll;
 }
 
@@ -216,6 +217,7 @@ header {
 .about__inner {
   display: flex;
   gap: 1em;
+  width: 100%;
 }
 
 .about__image {
@@ -230,6 +232,7 @@ header {
 .tab-control, #tabs {
   box-shadow: rgba(0, 0, 255, 0.3) 5px 5px 5px;
 }
+
 
 @keyframes fadeIn {
   from {
@@ -261,6 +264,12 @@ header {
 
   .primary {
     background-color: var(--primary);
+  }
+
+  .project-image {
+    max-width: 100px;
+    max-height: 100px;
+    /* filter: grayscale(50%); */
   }
 
 }
