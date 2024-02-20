@@ -89,7 +89,7 @@ header {
   margin: 0 auto;
 }
 
-.date {
+.subtitle {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
