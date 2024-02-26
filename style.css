@@ -103,7 +103,6 @@ header {
 }
 
 .btn {
-  display: block;
   text-decoration: none;
   background-color: var(--text);
   color: var(--primary);
@@ -171,7 +170,7 @@ header {
   background-color: var(--accent);
 }
 
-#diary, #another {
+.tab-content {
   overflow-y: scroll;
 }
 
@@ -221,7 +220,7 @@ header {
 }
 
 .about__image {
-  background-image: url(https://cdn.discordapp.com/attachments/859729768077066300/1073382576540094525/Untitled_Artwork.png?ex=65d7d66c&is=65c5616c&hm=9429f10bffc4c815c0430a3c986892ccc48bc663c3917edbcab50d079bbf5292&);
+  background-image: url(https://cdn.discordapp.com/attachments/859729768077066300/1211810060620140574/sp-200.png?ex=65ef8d10&is=65dd1810&hm=07673c4cff40bd7648111c6decf89828bab71030612207314c53f8f425155eeb&);
   background-size: cover;
   filter: sepia(100%);
   /* mix-blend-mode: darken; */
@@ -269,7 +268,13 @@ header {
   .project-image {
     max-width: 100px;
     max-height: 100px;
-    /* filter: grayscale(50%); */
+    filter: contrast(100%) grayscale(80%);
+    /* mix-blend-mode:color-burn; */
+    transition: all 0.5s ease;
+  }
+
+  .project-image:hover {
+    filter: grayscale(0%);
   }
 
 }
